@@ -1,0 +1,29 @@
+
+
+wget https://archive.apache.org/dist/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+tar -xzf kafka_2.13-3.5.0.tgz
+cd kafka_2.13-3.5.0
+
+-----------------------
+java -version
+sudo apt install -y openjdk-17-jdk
+java -version
+
+
+To do this , you can follow any of the 2 approaches shared belwo --
+Do a "sudo vim config/server.properties" - change ADVERTISED_LISTENERS to public ip of the EC2 instance
+
+pkill -f kafka.Kafka
+pkill -f zookeeper
+
+bin/zookeeper-server-start.sh config/zookeeper.properties   
+
+export KAFKA_HEAP_OPTS="-Xmx512M -Xms256M"
+
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --create --topic stocktopic --bootstrap-server 44.202.131.32:9092 --replication-factor 1 --partitions 1
+
+bin/kafka-console-producer.sh --topic stocktopic --bootstrap-server 44.202.131.32:9092 
+
+bin/kafka-console-consumer.sh --topic stocktopic --bootstrap-server 44.202.131.32:9092
