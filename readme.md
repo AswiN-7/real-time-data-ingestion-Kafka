@@ -5,7 +5,7 @@ An easy simple and solution to start with realtime data ingestion
 pre-requites : AWS Free tier account, Kafka basics
 
 Flow
-    ![alt text](image-3.png)
+    ![alt text](images/image-3.png)
 
 ## step 1 : setting up ec2
 
@@ -52,7 +52,7 @@ Flow
         bin/kafka-console-consumer.sh --topic stocktopic --bootstrap-server 44.202.131.32:9092
 
 try sending messages 
-    ![alt text](image.png)
+    ![alt text](images/image.png)
 
 
 ## step 3: real time data generation using python and sending the data to kafka topic 
@@ -63,13 +63,13 @@ try sending messages
 
     kafka_consumer.ipynb
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 data in s3
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
      
 data in athena 
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
