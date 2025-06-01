@@ -11,15 +11,15 @@ Flow
 
   lauch a ec2 instance and download kafka and java 
   
-  wget https://archive.apache.org/dist/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+      wget https://archive.apache.org/dist/kafka/3.5.0/kafka_2.13-3.5.0.tgz
   
-  tar -xzf kafka_2.13-3.5.0.tgz
+      tar -xzf kafka_2.13-3.5.0.tgz
   
-  cd kafka_2.13-3.5.0
+      cd kafka_2.13-3.5.0
 
-  sudo apt install -y openjdk-17-jdk
+      sudo apt install -y openjdk-17-jdk
   
-  java -version
+      java -version
 
 ## step 2 : setup kafka 
 
