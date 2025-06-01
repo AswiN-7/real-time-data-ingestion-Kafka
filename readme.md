@@ -4,6 +4,9 @@ An easy simple and solution to start with realtime data ingestion
 
 pre-requites : AWS Free tier account, Kafka basics
 
+Flow
+    ![alt text](image-3.png)
+
 ## step 1 : setting up ec2
 
   lauch a ec2 instance and download kafka and java 
@@ -66,4 +69,7 @@ data in s3
 
 ![alt text](image-2.png)
      
+data in athena 
+
+![alt text](image-4.png)
 
